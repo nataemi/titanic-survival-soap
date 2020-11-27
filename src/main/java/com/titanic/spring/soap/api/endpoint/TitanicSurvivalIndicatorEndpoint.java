@@ -1,8 +1,8 @@
 package com.titanic.spring.soap.api.endpoint;
 
 import com.titanic.spring.soap.api.service.TitanicSurvivalService;
-import com.titanic.spring.soap.api.titanicsurvival.Participant;
-import com.titanic.spring.soap.api.titanicsurvival.Survival;
+import com.titanic.spring.soap.api.titanicsurvival.ParticipantRequest;
+import com.titanic.spring.soap.api.titanicsurvival.SurvivalResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -18,7 +18,7 @@ public class TitanicSurvivalIndicatorEndpoint {
 
 	@PayloadRoot(namespace = NAMESPACE, localPart = "Participant")
 	@ResponsePayload
-	public Survival getAproximatedSurvival(@RequestPayload Participant participant) {
+	public SurvivalResponse getAproximatedSurvival(@RequestPayload ParticipantRequest participant) {
 		return service.checkSurvival(participant);
 	}
 

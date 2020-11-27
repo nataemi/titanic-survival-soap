@@ -1,8 +1,8 @@
 package com.titanic.spring.soap.api.service;
 
 
-import com.titanic.spring.soap.api.titanicsurvival.Participant;
-import com.titanic.spring.soap.api.titanicsurvival.Survival;
+import com.titanic.spring.soap.api.titanicsurvival.ParticipantRequest;
+import com.titanic.spring.soap.api.titanicsurvival.SurvivalResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,8 +10,8 @@ import java.util.List;
 @Service
 public class TitanicSurvivalService {
 
-	public Survival checkSurvival(Participant participant) {
-		Survival survival = new Survival();
+	public SurvivalResponse checkSurvival(ParticipantRequest participant) {
+		SurvivalResponse survival = new SurvivalResponse();
 		List<String> causeOfDeath = survival.getCauseOfDeath();
 
 		if (participant.getAge() > 16 && "M".equals(participant.getGender())) {

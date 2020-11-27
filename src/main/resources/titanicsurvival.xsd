@@ -4,7 +4,7 @@
 	xmlns:tns="http://www.titanic.com/spring/soap/api/titanicSurvival"
 	elementFormDefault="qualified">
 
-	<xsd:element name="Participant">
+	<xsd:element name="ParticipantRequest">
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element name="age" type="xsd:int" />
@@ -14,7 +14,7 @@
 		</xsd:complexType>
 	</xsd:element>
 
-	<xsd:element name="Survival">
+	<xsd:element name="SurvivalResponse">
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element name="wouldSurvive" type="xsd:boolean" />
