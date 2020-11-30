@@ -14,7 +14,7 @@
 		</xsd:complexType>
 	</xsd:element>
 
-	<xsd:element name="SurvivalResponse">
+	<xsd:element name="Survival">
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element name="wouldSurvive" type="xsd:boolean" />
